@@ -155,6 +155,8 @@ private static FoodType searchFoodType(String searchName) {
 
 
 
+
+
 static class FoodType {
     String name;
     FoodType collision;
@@ -271,7 +273,10 @@ private static void insertFoodType(String foodTypeName) {
 <td>
 
 ``` java
-private static void insertFood(FoodType foodType, Food newFood) {
+private static void insertFood(
+    FoodType foodType, 
+    Food newFood) {
+    
     Food prevFood = null;
     Food curFood = foodType.nextFood;
 
@@ -290,7 +295,10 @@ private static void insertFood(FoodType foodType, Food newFood) {
     }
 }
 
-private static void insertFoodType(String foodTypeName, String foodName) {
+private static void insertFoodType(
+    String foodTypeName, 
+    String foodName) {
+    
     FoodType newFoodType = new FoodType(foodTypeName);
     Food newFood = new Food(foodName);
     long hashNum = djb2Hash(newFoodType.name);
