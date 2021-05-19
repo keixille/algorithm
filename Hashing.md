@@ -136,8 +136,8 @@ private static FoodType searchFoodType(String searchName) {
 
 <table border="0">
 <tr>
-<td>From</td>
-<td>To</td>
+<td style="width: 200px">From</td>
+<td style="width: 200px">To</td>
 </tr>
 <tr>
 <td>
@@ -152,6 +152,8 @@ private static FoodType searchFoodType(String searchName) {
 
 
 
+    
+    
 
 
 
@@ -212,8 +214,8 @@ This method is for inserting new food type
 
 <table border="0">
 <tr>
-<td>From</td>
-<td>To</td>
+<td style="width: 200px">From</td>
+<td style="width: 200px">To</td>
 </tr>
 <tr>
 <td>
@@ -238,7 +240,17 @@ This method is for inserting new food type
 
 
 
-private static void insertFoodType(String foodTypeName) {
+
+
+
+
+
+
+
+private static void insertFoodType(
+    String foodTypeName) {
+    
+    
     FoodType newFoodType = new FoodType(foodTypeName);
     
     long hashNum = djb2Hash(newFoodType.name);
